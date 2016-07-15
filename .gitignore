@@ -1,0 +1,7 @@
+.idea
+*.iml
+*~
+*.swp
+target
+*.log
+data-pool/datapool.yml
