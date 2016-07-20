@@ -1,7 +1,7 @@
 # Data Pool tool.
 Data Pool is a configurable test automation supporting tool which fetches data from known data-sources and provides a way to query the data which is safe to be used by tests.
 
-Current version: 1.0.0-SNAPSHOT
+Current version: 1.0.0
 
 ## Purpose
  In a real world you need to run your automated tests against different environments (“dev”, “test”, “stage”, “pre-prod”, “prod” etc). Normally those environments point to different DBs thus data-sets may vary from endpoint to endpoint. At the same time, your tests need to know what to expect in each particular environment case. If you follow so called  “FullDB” approach your tests are being run against an application-under-test(AUT)'s instance pointing to a pre-populated DB or some other data-source and you do not have much control over that data. Somehow you need to ensure expected values correspond to actual data used by the AUT otherwise you will get false alarms due to “no-such-data” or “wrong-state-data” cases. Also your environments may not be completely ready (e.g. some services or third party components are absent or misconfigured). So a possible way is to run at least those tests which are able to pass on that environment while skipping all others. Another issue is coupling tests to test data, i.e. you need either "hard-code" several sets of data or copy-paste tests themselves.
@@ -18,8 +18,14 @@ Data Pool solves or significantly mitigates the issues outlined above by providi
 ## Getting started
 
 ### Download
-* maven artefact: TBD
-* [GitHub location](https://github.com/griddynamics/test-data-pool)
+maven artefact: 
+```
+<dependency>
+   <groupId>com.griddynamics.qa.datapool</groupId>
+   <artifactId>data-pool</artifactId>
+   <version>1.0.0</version>
+ </dependency>|
+```
 
 ### Examples
 Please have a look at _data-pool-examples_ project. It contains a set of ready-to-run examples like:
