@@ -24,6 +24,7 @@ public interface IFetcher<RESULT_TYPE> {
 
     /**
      * Triggers the fetching.
+     * @return Object of RESULT_TYPE containing fetched data (e.g. SqlRowSet)
      */
     RESULT_TYPE run();
 }

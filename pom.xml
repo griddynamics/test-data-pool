@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.griddynamics.qa.datapool</groupId>
     <artifactId>data-pool-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>Data Pool tool - parent module.</name>
     <url>https://github.com/griddynamics/test-data-pool</url>

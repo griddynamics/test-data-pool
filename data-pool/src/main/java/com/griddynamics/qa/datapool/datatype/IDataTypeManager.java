@@ -12,6 +12,7 @@ public interface IDataTypeManager<DATA_TYPE> {
     /**
      * Fetches data from remote data source.
      * This method is called by DataPool#fetch() for all registered DataType manager types.
+     * @return collection of fetched data
      */
     List<DATA_TYPE> fetch();
 }

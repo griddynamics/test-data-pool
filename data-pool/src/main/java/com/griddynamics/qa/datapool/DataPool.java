@@ -30,6 +30,8 @@ public class DataPool {
 
     /**
      * Adds the data-type manager instance to the set of known managers.
+     * @param newManager - manager
+     * @param dtClass - data-type class
      */
     public static void registerManagerForDataType(IDataTypeManager<? extends IDataType> newManager,
                                                     Class<? extends  IDataType> dtClass) {
@@ -87,7 +89,7 @@ public class DataPool {
 
     /**
      * Serializes (to Yaml) DataPool data into given filename
-     * @param filename
+     * @param filename - file name
      */
     public static void store(String filename){
         Yaml yaml = Marshaller.getYamlToStore();
@@ -113,7 +115,7 @@ public class DataPool {
 
     /**
      * Deserialize (from Yaml) DataPool from provided paths
-     * @param paths
+     * @param paths - one or more paths
      */
     @SuppressWarnings("unchecked")
     public static void load(Path...paths){

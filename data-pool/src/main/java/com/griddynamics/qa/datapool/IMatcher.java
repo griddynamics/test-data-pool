@@ -9,6 +9,8 @@ import java.util.function.Predicate;
  */
 public interface IMatcher{
     /**
+     * @param propName - property name
+     * @param value - property value
      * @return matcher implementation as a Predicate class to be run
      */
     Predicate<IDataType> getMatcher(String propName, Object value);
