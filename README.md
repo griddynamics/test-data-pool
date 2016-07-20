@@ -24,7 +24,7 @@ maven artefact:
    <groupId>com.griddynamics.qa.datapool</groupId>
    <artifactId>data-pool</artifactId>
    <version>1.0.0</version>
- </dependency>|
+ </dependency>
 ```
 
 ### Examples
