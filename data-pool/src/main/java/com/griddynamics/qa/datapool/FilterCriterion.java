@@ -15,6 +15,10 @@ public class FilterCriterion {
 
     /**
      * Utility method to shortcut calling of new FilterCriterion(...)
+     * @param propName - property to filter by
+     * @param strMatcher - one of matchers registered in {@link StandardMatchers} class
+     * @param value - value that will be used by matcher to compare with
+     * @return new FilterCriterion
      */
     public static FilterCriterion by(String propName, String strMatcher, Object value){
         return new FilterCriterion(propName, strMatcher, value);
@@ -22,6 +26,10 @@ public class FilterCriterion {
 
     /**
      * Utility method to shortcut calling of new FilterCriterion(...)
+     * @param propName - property to filter by
+     * @param matcher - matcher for the property
+     * @param value - value that will be used by matcher to compare with
+     * @return new FilterCriterion
      */
     public static FilterCriterion by(String propName, IMatcher matcher, Object value){
         return new FilterCriterion(propName, matcher, value);
@@ -29,6 +37,8 @@ public class FilterCriterion {
 
     /**
      * Utility method to shortcut calling of new FilterCriterion(...)
+     * @param criterion - FilterCriterion
+     * @return FilterCriterion passed as a parameter
      */
     public static FilterCriterion by(FilterCriterion criterion){
         return criterion;

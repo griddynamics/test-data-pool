@@ -45,7 +45,7 @@ public interface IDataType {
      * E.g.
      *   <code>
      *       user.add("nicknames", "BlackTester").add("EvilTester")
-     *       List<String> nicknames = user.get("nicknames") // returns ["BlackTester", "EvilTester"]
+     *       List&lt;String&gt; nicknames = user.get("nicknames") // returns ["BlackTester", "EvilTester"]
      *   </code>
      *
      * @param name - name of data-type property of <b>Collection</b> type.

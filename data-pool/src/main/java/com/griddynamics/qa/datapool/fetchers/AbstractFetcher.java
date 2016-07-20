@@ -44,6 +44,7 @@ public abstract class AbstractFetcher<RESULT_TYPE> implements IFetcher<RESULT_TY
 
     /**
      * Just a "sugar" to simplify access to the standard "ADDITIONAL_SETTINGS" property.
+     * @return additional settings object
      */
     protected Object getAdditionalSettings() {
         return fetcherConfig.getProperties().get(KEY_NAME_ADDITIONAL_SETTINGS);
@@ -51,6 +52,7 @@ public abstract class AbstractFetcher<RESULT_TYPE> implements IFetcher<RESULT_TY
 
     /**
      * Just a "sugar" to simplify access to the standard "SETTINGS" property.
+     * @return settings object
      */
     protected Object getSettings() {
         return fetcherConfig.getProperties().get(KEY_NAME_SETTINGS);
