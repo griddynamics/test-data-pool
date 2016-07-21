@@ -18,7 +18,9 @@ Data Pool solves or significantly mitigates the issues outlined above by providi
 ## Getting started
 
 ### Download
-maven artefact: 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.griddynamics.qa.datapool/data-pool/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.griddynamics.qa.datapool/data-pool)
+
+[Quick access via maven](http://search.maven.org/#artifactdetails|com.griddynamics.qa.datapool|data-pool|1.0.0|):
 ```
 <dependency>
    <groupId>com.griddynamics.qa.datapool</groupId>
