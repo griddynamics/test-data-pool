@@ -28,34 +28,34 @@ Data Pool solves or significantly mitigates the issues outlined above by providi
 ```
 
 ### Examples
-Please have a look at [data-pool-examples](https://github.com/griddynamics/test-data-pool/tree/master/data-pool-examples) project. It contains a set of ready-to-run examples like:
+Please have a look at [data-pool-examples](/data-pool-examples) project. It contains a set of ready-to-run examples like:
 
 #### Fetching
 
-* there are two simple fetchers by default: [DbFetcher](https://github.com/griddynamics/test-data-pool/blob/master/data-pool/src/main/java/com/griddynamics/qa/datapool/fetchers/DbFetcher.java) and [SimpleRestFetcher](https://github.com/griddynamics/test-data-pool/blob/master/data-pool/src/main/java/com/griddynamics/qa/datapool/fetchers/SimpleRestFetcher.java) ;
-* you could create your own fetchers by extending [AbstractFetcher](https://github.com/griddynamics/test-data-pool/blob/master/data-pool/src/main/java/com/griddynamics/qa/datapool/fetchers/AbstractFetcher.java) class or implementing [IFetcher](https://github.com/griddynamics/test-data-pool/blob/master/data-pool/src/main/java/com/griddynamics/qa/datapool/fetchers/IFetcher.java) interface;
-* Data Pool uses data-type managers to fetch data. So you should provide corresponding managers which know from where to get data and how to build corresponding data-type instances. Managers shall implement [IDataTypeManager](https://github.com/griddynamics/test-data-pool/blob/master/data-pool/src/main/java/com/griddynamics/qa/datapool/datatype/IDataTypeManager.java) interface. See [UserManager](https://github.com/griddynamics/test-data-pool/blob/master/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/dbfetcher/UserManager.java) as an example.
+* there are two simple fetchers by default: [DbFetcher](/data-pool/src/main/java/com/griddynamics/qa/datapool/fetchers/DbFetcher.java) and [SimpleRestFetcher](/data-pool/src/main/java/com/griddynamics/qa/datapool/fetchers/SimpleRestFetcher.java) ;
+* you could create your own fetchers by extending [AbstractFetcher](/data-pool/src/main/java/com/griddynamics/qa/datapool/fetchers/AbstractFetcher.java) class or implementing [IFetcher](/data-pool/src/main/java/com/griddynamics/qa/datapool/fetchers/IFetcher.java) interface;
+* Data Pool uses data-type managers to fetch data. So you should provide corresponding managers which know from where to get data and how to build corresponding data-type instances. Managers shall implement [IDataTypeManager](/data-pool/src/main/java/com/griddynamics/qa/datapool/datatype/IDataTypeManager.java) interface. See [UserManager](/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/dbfetcher/UserManager.java) as an example.
 
-For DB fetching example please see [DbFetcherExample](https://github.com/griddynamics/test-data-pool/blob/master/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/dbfetcher/DbFetcherExample.java).
+For DB fetching example please see [DbFetcherExample](/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/dbfetcher/DbFetcherExample.java).
 
-For REST Web Service fetching example please see [SimpleRestFetcherExample](https://github.com/griddynamics/test-data-pool/blob/master/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/simplerestfetcher/SimpleRestFetcherExample.java) .
+For REST Web Service fetching example please see [SimpleRestFetcherExample](/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/simplerestfetcher/SimpleRestFetcherExample.java) .
 
 #### Query and filtering
 
-* there is a set of built-in matchers(IS_LESS, IS, etc). Have a look at [StandardMatchers](https://github.com/griddynamics/test-data-pool/blob/master/data-pool/src/main/java/com/griddynamics/qa/datapool/matchers/StandardMatchers.java);
-* you could create your own matchers by implementing [IMatcher](https://github.com/griddynamics/test-data-pool/blob/master/data-pool/src/main/java/com/griddynamics/qa/datapool/IMatcher.java) interface.
+* there is a set of built-in matchers(IS_LESS, IS, etc). Have a look at [StandardMatchers](/data-pool/src/main/java/com/griddynamics/qa/datapool/matchers/StandardMatchers.java);
+* you could create your own matchers by implementing [IMatcher](/data-pool/src/main/java/com/griddynamics/qa/datapool/IMatcher.java) interface.
 
-For Find&Filter example please see [FindExample](https://github.com/griddynamics/test-data-pool/blob/master/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/find/FindExample.java)
+For Find&Filter example please see [FindExample](/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/find/FindExample.java)
 
 #### Store&Load
 
 * by default Data Pool supports some basic Java types upon storing/loading data;
-* you could support you own types by extending [Yamler](https://github.com/griddynamics/test-data-pool/blob/master/data-pool/src/main/java/com/griddynamics/qa/datapool/serialization/Yamler.java) class.
+* you could support you own types by extending [Yamler](/data-pool/src/main/java/com/griddynamics/qa/datapool/serialization/Yamler.java) class.
 
-For Find&Filter example please see [SerializationExample](https://github.com/griddynamics/test-data-pool/blob/master/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/seriliazation/SerializationExample.java)
+For Find&Filter example please see [SerializationExample]/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/seriliazation/SerializationExample.java)
 
 #### Usage by automated tests
-For Cucumber based example please have a look at [.../cuke/datapool.feature](https://github.com/griddynamics/test-data-pool/blob/master/data-pool-examples/src/test/resources/com/griddynamics/qa/datapool/examples/cuke/datapool.feature).
+For Cucumber based example please have a look at [.../cuke/datapool.feature](/data-pool-examples/src/test/resources/com/griddynamics/qa/datapool/examples/cuke/datapool.feature).
 
 ### Package view
 ![Package view](./data-pool_package_view.jpeg "Package view")
