@@ -53,7 +53,7 @@ For Find&Filter example please see [FindExample](/data-pool-examples/src/main/ja
 * by default Data Pool supports some basic Java types upon storing/loading data;
 * you could support you own types by extending [Yamler](/data-pool/src/main/java/com/griddynamics/qa/datapool/serialization/Yamler.java) class.
 
-For Find&Filter example please see [SerializationExample]/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/seriliazation/SerializationExample.java)
+For Find&Filter example please see [SerializationExample](/data-pool-examples/src/main/java/com/griddynamics/qa/datapool/examples/seriliazation/SerializationExample.java)
 
 #### Usage by automated tests
 For Cucumber based example please have a look at [.../cuke/datapool.feature](/data-pool-examples/src/test/resources/com/griddynamics/qa/datapool/examples/cuke/datapool.feature).
