@@ -11,11 +11,11 @@ Data Pool is a configurable test automation supporting tool which fetches data f
 Data Pool solves or significantly mitigates the issues outlined above by providing a single source of valid and available expected data for your tests.
 
 ## Features
-* fetches data from known data-sources and stores it into the pool;
+* fetches data from known data-sources and stores it into the pool(in-memory storage);
 * provides a way to query the pool in order to get valid data which is safe to be used by tests;
 * allows to filter fetched data to get those values only which are needed by concrete test;
-* makes it possible to store and load fetched data;
-* highly customizable, own fetchers, filter criteria, custom data-types are supported.
+* makes it possible to store and load fetched data to/from file system;
+* highly customizable, e.g. you can plug your own fetchers, filter criteria, custom data-types etc in.
 
 ## Getting started
 
