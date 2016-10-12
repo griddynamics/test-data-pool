@@ -8,7 +8,7 @@
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Data Pool tool - usage examples.</name>
-    <url>http://griddynamics.com</url>
+    <url>https://github.com/griddynamics/test-data-pool</url>
     <description>Set of usage examples of GriDynamic's Data Pool tool.</description>
     <licenses>
         <license>
@@ -34,10 +34,10 @@
         <junit.version>4.11</junit.version>
         <hsqldb.version>RELEASE</hsqldb.version>
     </properties>
-
+    
     <dependencies>
         <dependency>
-            <groupId>com.griddynamics.qa</groupId>
+            <groupId>com.griddynamics.qa.datapool</groupId>
             <artifactId>data-pool</artifactId>
             <version>1.0.1-SNAPSHOT</version>
         </dependency>

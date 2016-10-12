@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.griddynamics.qa</groupId>
+    <groupId>com.griddynamics.qa.datapool</groupId>
     <artifactId>data-pool</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Data Pool tool</name>
-    <url>http://griddynamics.com</url>
-    <description>Data Pool tool is intended to mitigate risks of running automated tests against multiple unstable
+    <url>https://github.com/griddynamics/test-data-pool</url>
+    <description>Test Data Pool tool is intended to mitigate risks of running automated tests against multiple unstable
         “FullDB” environments having unpredictable set of data.
     </description>
     <licenses>
@@ -22,6 +22,28 @@
         <name>Grid Dynamics, Inc.</name>
         <url>http://www.griddynamics.com</url>
     </organization>
+
+    <developers>
+        <developer>
+            <id>budabum</id>
+            <name>Alexey Lyanguzov</name>
+            <email>budabum@gmail.com</email>
+            <organization>Grid Dynamics, Inc</organization>
+            <organizationUrl>http://www.griddynamics.com</organizationUrl>
+            <roles>
+                <role>author</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>L-Evg</id>
+            <name>Evgeniy Lozovan</name>
+            <organization>Grid Dynamics, Inc</organization>
+            <organizationUrl>http://www.griddynamics.com</organizationUrl>
+            <roles>
+                <role>co-author</role>
+            </roles>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -139,6 +161,22 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
+    <scm>
+        <connection>scm:git:git@github.com:griddynamics/test-data-pool.git</connection>
+        <developerConnection>scm:git:git@github.com:griddynamics/test-data-pool.git</developerConnection>
+        <url>scm:git:git@github.com:griddynamics/test-data-pool.git</url>
+    </scm>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -152,5 +190,47 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>
