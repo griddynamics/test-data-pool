@@ -24,7 +24,7 @@ Data Pool solves or significantly mitigates the issues outlined above by providi
 <dependency>
    <groupId>com.griddynamics.qa.datapool</groupId>
    <artifactId>data-pool</artifactId>
-   <version>1.0.0</version>
+   <version>1.0.1</version>
  </dependency>
 ```
 
