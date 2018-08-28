@@ -114,6 +114,35 @@ public class DataPool {
     }
 
     /**
+     * Loads data from resource paths specified. I.e. data files are supposed to be available for the class loader
+     * under /resource directory
+     * e.g.
+     * "/data/users.yml"
+     *
+     * where /data is a sub-directory of /resources.
+     *
+     * @param resourcePaths - one or more resource sub-paths.
+     */
+    public static void load(String... resourcePaths){
+        ClassLoader classLoader = DataPool.class.getClassLoader();
+        List<Path> paths = new ArrayList<>();
+
+        for (String resourcePath : resourcePaths) {
+            paths.add(Paths.get(Objects.requireNonNull(classLoader.getResource(resourcePath)).getPath()));
+        }
+
+        load(paths);
+    }
+
+    /**
+     * Deserialize (from Yaml) DataPool from provided paths
+     * @param paths - one or more paths
+     */
+    public static void load(List<Path> paths){
+        load(paths.toArray(new Path[0]));
+    }
+
+    /**
      * Deserialize (from Yaml) DataPool from provided paths
      * @param paths - one or more paths
      */

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.griddynamics.qa</groupId>
     <artifactId>data-pool-examples</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Data Pool tool - usage examples.</name>
     <url>https://github.com/griddynamics/test-data-pool</url>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>com.griddynamics.qa.datapool</groupId>
             <artifactId>data-pool</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.2-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
